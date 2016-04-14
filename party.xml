@@ -17,7 +17,9 @@
         <record model="ir.action.act_window" id="act_open_manufactuer">
             <field name="name">Manufacturers</field>
             <field name="res_model">party.party</field>
-            <field name="domain">[('manufacturer', '=', True)]</field>
+            <field name="domain"
+                eval="[('manufacturer', '=', True)]"
+                pyson="1"/>
         </record>
         <menuitem id="menu_manufacturer" name="Manufacturers"
             action="act_open_manufactuer"
